@@ -1,0 +1,14 @@
+prefix=@prefix@
+exec_prefix=@prefix@
+libdir=@libdir@
+includedir=@includedir@
+soname=@libknot_SONAME@
+
+Name: libknot
+Description: Knot DNS library
+URL: https://www.knot-dns.cz
+Version: @PACKAGE_VERSION@
+Requires.private: libdnssec = @PACKAGE_VERSION@
+Libs: -L${libdir} -lknot
+Libs.private: -lm @lmdb_LIBS@
+Cflags: -I${includedir}
